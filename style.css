@@ -91,4 +91,7 @@ nav li:hover{
         width: 90%;
         height: auto;
     }
+    .content{
+       line-height: 5;
+    }
 }
