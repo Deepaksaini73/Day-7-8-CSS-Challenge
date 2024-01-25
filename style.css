@@ -93,32 +93,8 @@ div div h4:hover{
     position: relative;
     overflow: hidden;
 }
-img::before{
-    content: "g";
-    background-color: blue;
-    width: 100px;
-    height: 100%;
-    position: absolute;
-    animation: rotate 4s linear infinite;
-}
-img::after{
-        content: "g";
-        background-color: blue;
-        width: 100px;
-        height: 100%;
-        position: absolute;
-        animation: rotate 4s linear infinite;
-}
 .box2 img{
     width: 200px;
-}
-@keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
 }
 @media  screen and (max-width: 600px) {
     nav{
