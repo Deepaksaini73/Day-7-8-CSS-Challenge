@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding:0;
-    background-color: rgb(30, 152, 201);
+    background-color: black;
 }
 nav{
     display: flex;
@@ -23,25 +23,34 @@ nav li{
     background-color: rgb(174, 112, 122);
     height: fit-content;
     border-radius: 20px;
+    width: 100px;
+    animation: choteSeBada 2s;
 }
 nav li:hover{
-    background-color: aquamarine;
-    color: black;
+    background-color: black;
 }
 #gallary{
     margin: 30px;
-    border:2px solid black;
+    border:2px solid azure;
     text-align: center;
 }
 .subdiv{
     background-color: azure;
     padding: 10px;
     margin: 20px;
+    transition: 10s;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-end: contain;
+}
+.subdiv:hover{
+    cursor: pointer;
 }
 .box{
-    border: 2px solid black;
-    width: 80%;
+    border: 2px solid azure;
+    width: calc(100% - 40px);
     height: 400px;
+
     overflow: hidden;
     position: relative;
     margin-left: 20px;
@@ -63,14 +72,53 @@ nav li:hover{
 .content:hover{
     opacity: 1;
 }
-
+div div h4{
+    background-color: black;
+    border-radius: 3px;
+    width: 100px;
+    height: 20px;
+    color: yellow;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-left: calc(50% - 40px);
+}
+div div h4:hover{
+    background-color: blue;
+}
 .box img{
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+img::before{
+    content: "g";
+    background-color: blue;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+}
+img::after{
+        content: "g";
+        background-color: blue;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        animation: rotate 4s linear infinite;
 }
 .box2 img{
     width: 200px;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 @media  screen and (max-width: 600px) {
     nav{
@@ -81,9 +129,10 @@ nav li:hover{
         margin: 50px 50px;
         border-radius: 50px;
         background-color: azure;
-        border: 10px solid black;
+        border: 10px solid yellow;
     }
     nav li{
+        width: 100%;
         margin-left: initial;
         background-color:rgb(174, 112, 122);
     }
@@ -92,6 +141,41 @@ nav li:hover{
         height: auto;
     }
     .content{
-       line-height: 5;
+        line-height: 5;
+    }
+}
+
+#gallary{
+    animation: fade 2s;
+}
+@keyframes fade-in {
+    from{
+        scale: .7;
+        opacity: 0.5;
+        
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+        
+    }
+    
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes choteSeBada {
+    0%{
+        scale: 0.5;
+    }
+    100%{
+        scale:1
     }
 }
