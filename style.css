@@ -24,7 +24,7 @@ nav li{
     height: fit-content;
     border-radius: 20px;
     width: 100px;
-    animation: choteSeBada 2s;
+    animation: choteSeBada 3s;
 }
 nav li:hover{
     background-color: black;
@@ -43,7 +43,7 @@ nav li:hover{
     animation-timeline: view();
     animation-range-end: contain;
 }
-.subdiv:hover{
+.subdiv:hover,img{
     cursor: pointer;
 }
 .box{
@@ -96,13 +96,65 @@ div div h4:hover{
 .box2 img{
     width: 200px;
 }
+.testm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testm h6{
+    color: wheat;
+}
+.testm div{
+    margin: 30px;
+    padding: 20px;
+    width: 250px;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    -ms-align-items:center;
+    background-color:  #2C3447;
+    box-shadow: 3px 2px 2px  #8a8787;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.testm div::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 140%;
+    margin-top: -100px;
+    z-index: -1;
+    background: linear-gradient(red,yellow);
+    animation: rotate 4s linear infinite;
+}
+.testm div::after{
+    content: '';
+    position: absolute;
+    background:#2C3447 ;
+    z-index: -1;
+    inset: 5px;
+}
+.testm img{
+    width: 60px;
+    border: 4px solid goldenrod;
+    border-radius: 50%;
+}
+.testm h3{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
 @media  screen and (max-width: 600px) {
     nav{
         display: flex;
         flex-direction: column;
         height: 400px;
         width: 80%;
-        margin: 50px 50px;
+        margin: 50px auto;
         border-radius: 50px;
         background-color: azure;
         border: 10px solid yellow;
@@ -119,8 +171,10 @@ div div h4:hover{
     .content{
         line-height: 5;
     }
+    .testm{
+        flex-direction: column;
+    }
 }
-
 #gallary{
     animation: fade 2s;
 }
@@ -141,7 +195,8 @@ div div h4:hover{
 @keyframes fade {
     0%{
         opacity: 0;
-    }100%{
+    }
+    100%{
         opacity: 1;
     }
     
@@ -153,5 +208,13 @@ div div h4:hover{
     }
     100%{
         scale:1
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
