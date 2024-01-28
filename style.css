@@ -1,8 +1,7 @@
 body{
     margin: 0;
     padding:0;
-    background:linear-gradient(gray,blue,pink,red,black,white);
-
+    background:linear-gradient(gray,blue,pink,red,black,white, #ea1d6f);
 }
 nav{
     display: flex;
@@ -148,8 +147,56 @@ div div h4:hover{
     border-radius: 20px;
 }
 
+.cUs{
+    width: 700px;
+    height:fit-content;
+    display: flex;
+    justify-content: space-around;
+    background:rgba(0,0,0) ;
+    color: #ea1d6f;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 60px;
+    margin-bottom: 100px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cUs button{
+    border-style: none;
+    background-color: black;
+    color: #ea1d6f;
+    font-size: 1em;
+    text-decoration: none;
+}
+.cUs button:hover{
+    color: #b35c7f;
+}
+.cUs div h1{
+    text-decoration: underline;
+}
+input{
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #cec7c7;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s linear;
+}
+input::placeholder{
+    color: rgb(199, 191, 191);
+}
+input:focus{
+    border-bottom-color: #ea1d6f;
+}
 
-@media  screen and (max-width: 600px) {
+
+@media  screen and (max-width: 700px) {
     nav{
         display: flex;
         flex-direction: column;
@@ -174,6 +221,13 @@ div div h4:hover{
     }
     .testm{
         flex-direction: column;
+    }
+    .cUs{
+        width: 80%;
+        height: fit-content;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 20%;
     }
 }
 #gallary{
