@@ -34,6 +34,10 @@ nav li:hover{
     border:2px solid azure;
     text-align: center;
 }
+div div p{
+    font-family: 'Single Day', cursive;
+    color:#ea1d6f;
+}
 .subdiv{
     background-color: azure;
     padding: 10px;
@@ -119,6 +123,7 @@ div div h4:hover{
     overflow: hidden;
 }
 
+
 .testm div::before{
     content: '';
     position: absolute;
@@ -145,6 +150,7 @@ div div h4:hover{
     background-color: white;
     padding: 20px;
     border-radius: 20px;
+    font-family: 'Rubik Glitch Pop', system-ui;
 }
 
 .cUs{
@@ -170,9 +176,12 @@ div div h4:hover{
     color: #ea1d6f;
     font-size: 1em;
     text-decoration: none;
+    text-transform: uppercase;
 }
 .cUs button:hover{
     color: #b35c7f;
+    background-color: rgba(172, 172, 176, 0.2);
+    border-radius: 10px;
 }
 .cUs div h1{
     text-decoration: underline;
